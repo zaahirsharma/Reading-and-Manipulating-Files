@@ -1,48 +1,3 @@
-'''
-This is the template file for the In Class Coding Exam - Fill in your Name, Section & Date below
-Name: ZAAHIR SHARMA
-Sec #: 551
-Date:  NOVEMBER 27, 2023
-    
-Aggie Code of Honor:
-By uploading this file to Canvas, I pledge that I have neither given nor received aid in completing this exam. 
-In addition, I have followed the strictures of the Texas A&M University Aggie Honor Code during today's test period.
-'''
-
-
-
-'''############ Instructions for FINAL Coding Exam ###############################
-
-Scenario: After Freshman Year, you are given an Internship to automate some 
-computations as part of a larger group. You are to provide your solution using
-the Python language. 
-
-You are provided a template file pre-named Custom_Script.py. You should use 
-THIS file so that all code by other interns can be integrated into one complete
-package. Hence, you must stick to the format dictated by the template. 
-
-You are given a sample test file test_data.csv to help you validate your code,
-but your evaluation will be based on a larger test data set that you do not
-have access to. It should be your intent to make sure your script will handle
-all possible test cases as per the specifications below.
-
-The python file you submit must have the name Custom_Script.py as provided.
-This file provided as a template comes along with stub code to read test_data.csv 
-and provide variables Input1, Input2 & Output for checking your code. 
-DO NOT CHANGE THESE NAMES. 
-
-MAKE SURE YOU PUT BOTH FILES Custom_Script.py & test_data.csv IN SAME FOLDER
-
-Read each section below and complete the code as requested. '''
-
-
-'''PART A.	Section of Custom_Script.py: 
------- File Read Template Provided ---- YOU DO NOT HAVE ANY CODE TO WRITE HERE
-
-# # Run to see Input & Output in "Variable Explorer" before you code next sections
-# # First clear all other variables in your memory
-# # Reads test_data.csv and CONVERTs to Float VARIABLEs in LISTs: Input1, Input2 & Output
-'''
 
 Input1 = []
 Input2 = []
@@ -76,33 +31,25 @@ fileID.close()
 # print('-------------------------------------------------')
 
 
-''' ------------------------ YOUR SOLUTION BELOW THIS LINE ---------------------------
 
-# # Part B Section of Custom_Script.py: [30%] – Writing functions & Coding Conditional Logic
 
-# The problem: Given measurements from sensors Input1, Input2 & Output you must write a function that implements the logic as mentioned below
-# Write your custom function that takes in ONE Value from Input1 (x1) and Input2(x2) and returns ONE output --> Your_Output
-# Also pass in TOLERANCE as an additional argument into the function. e.g. Your_Function(x1,x2,TOL)
-# Ensure all arguments required by the function are passed in as arguments and Your_Output value is returned
-# If Your_Output matches the test data Output provided, you know your function is working correctly. 
-# Else debug and fix your code before proceeding.
+# The problem: Given measurements from sensors Input1, Input2 & Output the written function implement the logic as mentioned below
+# This is a custom function that takes in ONE Value from Input1 (x1) and Input2(x2) and returns ONE output --> My_Output
+# Also it passes a TOLERANCE as an additional argument into the function. e.g. My_Output(x1,x2,TOL)
+# All arguments required by the function are passed in as arguments and My_Output value is returned
 
-###################   This is the logic your function has to produce:##################################
+###################   This is the logic the function uses for production:##################################
 
-1. if x1 is less than x2 then return 'cosine' of 'x1'
-2. if x1 is equal to x2 then return 1 (MUST COMPARE floating point numbers within TOL = 10**-6)
-3. if x1 is greater than x2 then return 'sine' of 'x2'. 
-trignometric functions are in the math library
+# 1. if x1 is less than x2 then return 'cosine' of 'x1'
+# 2. if x1 is equal to x2 then return 1 (MUST COMPARE floating point numbers within TOL = 10**-6)
+# 3. if x1 is greater than x2 then return 'sine' of 'x2'. 
+# trignometric functions are in the math library
 
-###########   RUBRIC   ###########
-Function definition --> 10 points - Ensure all arguments requested by the function are passed in as arguments e.g. Your_Function(x1,x2,TOL)
-Conditional logic   --> 10 points [3 Points for < & > conditions, and 4 Points for equality with TOLERANCE]
-Return Values       --> 10 points
-'''
+
 
 from math import *
 
-def Your_Output(num1, num2, TOL):
+def My_Output(num1, num2, TOL):
     if num1 < num2:
         return cos(num1)
     elif num1 > num2:
@@ -113,28 +60,15 @@ def Your_Output(num1, num2, TOL):
 
     
 
-'''  Part C. Section of Custom_Script.py: [30%] – Calling your Function in a Loop & Testing your_output for all inputs provided
-# Ensure you are comparing floating point numbers using a tolerance of 10**-6. 
-# Ensure you can test against the length of data rows of the Input array. 
-# We will use a test file with different number of rows (than currently provided) to test your solution and your code should still work. 
-# You can assume Input and Output are lists (arrays) of the same length. 
-# These list variables are floating point numbers and row values correspond to each other. 
+ 
 
-###################   This is the logic this section of your code has to produce:##################################
-1. Pass one pair (row) of x1, x2 value & TOLERANCE to YOUR above defined function and compare Your_Output to the corresponding values in Output provided in file.
-    Note: Ensure you are comparing floating point numbers using a tolerance specified. 
-2. Do this for all inputs (every row of file provided) - in a loop
-3. If your function output matches the output given in file you have success. (Compare floating point numbers with Tolerance specified)
-4. Print to console number of successes (Your_Output matches given Output to specified TOLERANCE)
-5. Print to console number of failures
-6. Print 'percentage of total successes' = [successes/(successes+failures)]*100 to console. ######  This is your approximate score. #####
+###################   This is the logic the function uses for production for this section :##################################
 
-###########   RUBRIC   ###########
-Proper Loop structure              --> 10 points
-Compute Success/Failures           --> 10 points (using TOL 10**-6)
-Print Values (Success/Failures/%)  --> 10 points
-'''
-        
+# 1. Passes one pair (row) of x1, x2 value & TOLERANCE to the above defined function and compares My_Output to the corresponding values in Output provided in file.
+# 2. This occurs for all inputs (every row of file provided) - in a loop
+# 3. It also prints to console number of successes (My_Output matches given Output to specified TOLERANCE)
+# 4. Prints to console number of failures
+# 5. Prints 'percentage of total successes' = [successes/(successes+failures)]*100 to console. This is the approx score.
 
         
 tolerance = 10**-6
@@ -155,23 +89,10 @@ print(success_num,failure_num,f"{success_percent}%")
 
 
 
-
-''' Part D. Section of Custom_Script.py: [30%] – Testing Plots
-
-# Use matplotlib 
-# Produce two overplotted plots  
-# 1. Plot Points and LINE through them between 'Input1' (X-Axis) versus 'Your_Output' (Y-Axis) in BLUE
-# 2. Over Plot a RED line with Points between 'Input2' (X-Axis) versus ' Your Output' (Y-Axis) 
- 
-# # Label both your plot with appropriate X-Axis, Y-Axis Labels and title.
-Example Plot is provided for verification "Figure.png"
-
-###########   RUBRIC   ###########
-Plot1          --> 10 points (Blue Points)
-Plot2          --> 10 points (Red Line)
-Figure Title  --> 2 points
-X & Y Labels  --> 8 points
-'''
+# This part uses matplotlib 
+# Produces two overplotted plots  
+# 1. Plots Points and LINE through them between 'Input1' (X-Axis) versus 'My_Output' (Y-Axis) in BLUE
+# 2. Over Plot a RED line with Points between 'Input2' (X-Axis) versus ' My_Output' (Y-Axis) 
 
 import matplotlib.pyplot as plt
 
@@ -191,16 +112,5 @@ plt.show()
 
 
 
-''' Part E. Enter your grade (Success= yourScore%) to Canvas in the Text Box 
-
-###########   RUBRIC   ###########        
-Score entry ---> [10 Points]
-
-
-UPLOAD ONLY YOUR Solution Custom_Script.py to Canvas. NOT THE DATA FILE
-# Make sure to upload correct file. We cannot grade if you upload the wrong file.
- 
-
-'''
     
     
