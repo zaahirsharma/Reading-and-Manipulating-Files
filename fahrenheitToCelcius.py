@@ -8,4 +8,5 @@ with open("Celcius.dat.txt", "r") as myFile:
         newFile.write(str(num)+"\n")
         line = myFile.readline()
 '''
-
+# The Celcius.dat.txt has not been uploaded but others can create their own
+# with each Celcius temperature on a new line and use this code for conversion.
